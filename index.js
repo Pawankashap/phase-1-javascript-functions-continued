@@ -7,19 +7,8 @@
    return `This Monday, I will ${paraValue}.`;
 }
 
-function wrapAdjective(paraValue1='*') {
-    if (paraValue1==='*') {
-           const innerFunction= function(paraValue='special') {
-            return `You are ${paraValue1}a hard worker${paraValue1}!`
-            }
-            return innerFunction;
-    }
-    else if (paraValue1==='||'){
-        const innerFunction= function(paraValue='special') {
-            return `You are ${paraValue1}a dedicated programmer${paraValue1}!`
-            }
-            return innerFunction;
-    }
-}
-
-
+function wrapAdjective(flair = "*") {
+    return function(adjective = "special") {
+      return `You are ${flair}${adjective}${flair}!`;
+    };
+  }
